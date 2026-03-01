@@ -1,1 +1,37 @@
+# Phishing Email Investigation
 
+## Alert Overview
+A suspicious email was flagged by the monitoring system due to characteristics commonly associated with phishing attempts.
+The message appeared to impersonate a known external supplier and requested urgent action from the recipient.
+
+## Detection Source
+Email security monitoring / SIEM correlation
+
+## Observed Indicators
+- Sender domain visually similar to legitimate supplier
+- Urgent payment-related language
+- Embedded external hyperlink
+- Unexpected request context
+
+## Analyst Assessment
+The email shows clear indicators of a credential-harvesting phishing attempt.  
+The link redirects to a non-corporate domain designed to capture user login details.  
+No evidence was found that the user interacted with the link at the time of review.
+
+## Potential Risk
+If the link had been accessed and credentials entered, unauthorized system access and potential data exposure could occur.
+
+## Actions Taken
+- Email removed from user mailbox
+- Sender domain blocked
+- User notified of phishing attempt
+- Environment checked for similar emails
+
+## Escalation Considerations
+Escalation required if:
+- User confirms link interaction
+- Credentials were entered
+- Additional recipients identified
+
+## Notes
+No confirmed compromise identified during analysis.
